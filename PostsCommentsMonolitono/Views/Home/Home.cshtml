@@ -1,0 +1,26 @@
+﻿@model List<PostsCommentsMonolitono.Repository.TabPost>
+@{
+    ViewBag.Title = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da Página</title>
+</head>
+<body>
+    @foreach(var posts in Model)
+            {
+        <div>
+            <img src="@posts.Foto" />
+            <h3>@posts.NomeConta</h3>
+            <p>@posts.Comentarios</p>
+            <p>@posts.id</p>
+        </div>
+                
+            }
+</body>
+</html>
+
+

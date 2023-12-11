@@ -1,0 +1,33 @@
+﻿@{
+    PostsCommentsMonolitono.Repository.TabPost idPost = ViewData["DeleteComment"] as PostsCommentsMonolitono.Repository.TabPost;
+
+} 
+@{
+    ViewBag.Title = "DeleteComment";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>DeleteComment</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="@Url.Action("DeleteComment", "Home", new { id = idPost.id })">
+            <h1>DeleteComment</h1>
+
+            <label>ID Post:</label>
+            <input type="hidden" id="postId" name="id" value="@idPost.id">
+
+            <br />
+
+            <button type="submit" class="btn btn-primary">
+                Deletar post
+            </button>
+        </form>
+
+    </div>
+</body>
+</html>
+

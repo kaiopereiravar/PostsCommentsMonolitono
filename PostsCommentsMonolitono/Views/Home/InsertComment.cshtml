@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "InsertComment";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da Página</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="@Url.Action("InsertComment", "Home")">
+            <h1>Insert Post</h1>
+
+            <label>Foto Post:</label>
+            <input type="text" name="foto" placeholder="Digite o seu nome" required aria-describedby="basic-addon1">
+            <br />
+
+            <label>Titulo Post:</label>
+            <input type="text" name="titulo" placeholder="Digite o seu nome" required aria-describedby="basic-addon1">
+            <br />
+
+            <label>Comentario:</label>
+            <input type="text" name="comentarios" placeholder="Digite o seu nome" required aria-describedby="basic-addon1">
+            <br />
+
+            <button type="submit" class="btn btn-primary">
+                Inserir post
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+
+
